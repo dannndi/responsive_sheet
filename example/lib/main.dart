@@ -155,9 +155,8 @@ class HomePage extends StatelessWidget {
                       ),
                     );
                   },
-                  builder: (context) => BottomSheetExampleOne(
-                    title: "Pick A Color",
-                  ),
+                  builder: (context) =>
+                      BottomSheetExampleOne(title: "Pick A Color"),
                 );
 
                 if (context.mounted && result != null) {

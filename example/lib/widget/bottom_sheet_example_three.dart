@@ -1,4 +1,3 @@
-
 import 'package:example_responsive_sheet/widget/bottom_sheet_example_one.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sheet/responsive_sheet.dart';
@@ -7,7 +6,8 @@ class BottomSheetExampleThree extends StatefulWidget {
   const BottomSheetExampleThree({super.key});
 
   @override
-  State<BottomSheetExampleThree> createState() => _BottomSheetExampleThreeState();
+  State<BottomSheetExampleThree> createState() =>
+      _BottomSheetExampleThreeState();
 }
 
 class _BottomSheetExampleThreeState extends State<BottomSheetExampleThree> {

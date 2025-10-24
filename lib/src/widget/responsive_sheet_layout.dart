@@ -50,16 +50,14 @@ class _ResponsiveSheetLayoutState extends State<ResponsiveSheetLayout> {
   @override
   Widget build(BuildContext context) {
     // The actual child widget built from the user's builder callback.
-    final content = Material(
-      key: contentKey,
-      child: widget.builder(context),
-    );
+    final content = Material(key: contentKey, child: widget.builder(context));
 
     // Screen size used for responsive constraints.
     final size = MediaQuery.sizeOf(context);
 
     // Determine which layout type should be used.
-    final type = widget.typeBuilder?.call(context) ??
+    final type =
+        widget.typeBuilder?.call(context) ??
         ResponsiveSheetUtils.defaultType(context);
 
     switch (type) {

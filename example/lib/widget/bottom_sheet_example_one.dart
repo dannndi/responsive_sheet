@@ -35,9 +35,7 @@ class BottomSheetExampleOne extends StatelessWidget {
               separatorBuilder: (_, __) => const SizedBox(height: 8),
               itemBuilder: (context, index) {
                 final color = Colors.primaries[index];
-                return _ColorTile(
-                  color: color,
-                );
+                return _ColorTile(color: color);
               },
             ),
           ),
@@ -70,7 +68,7 @@ class _ColorTileState extends State<_ColorTile> {
     final theme = Theme.of(context);
 
     return InkWell(
-      onTap: (){
+      onTap: () {
         Navigator.pop(context, name);
       },
       borderRadius: BorderRadius.circular(12),
