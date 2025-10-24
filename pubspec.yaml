@@ -4,7 +4,6 @@ version: 1.0.0
 homepage: https://github.com/dannndi/responsive_sheet
 repository: https://github.com/dannndi/responsive_sheet
 license: MIT
-publish_to: "https://pub.dev"
 
 environment:
   sdk: ^3.8.1
