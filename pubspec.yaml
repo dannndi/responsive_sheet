@@ -1,6 +1,6 @@
 name: responsive_sheet
 description: "Responsive Sheet for Desktop, Tablet and Mobile"
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/dannndi/responsive_sheet
 repository: https://github.com/dannndi/responsive_sheet
 license: MIT
@@ -25,8 +25,8 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  assets:
-    - example/assets/
+  # assets:
+  #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
