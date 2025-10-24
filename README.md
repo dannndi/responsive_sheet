@@ -1,5 +1,7 @@
 # 🧩 Responsive Sheet
 
+<img src="example/assets/example/default_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+
 A powerful and flexible **responsive bottom sheet** for Flutter that adapts automatically between **modal**, **side sheet**, and **dialog** modes — depending on the screen size.
 
 It’s designed for apps that need a seamless experience across **mobile**, **tablet**, and **desktop** platforms.
