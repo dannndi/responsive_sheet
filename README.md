@@ -1,6 +1,6 @@
 # 🧩 Responsive Sheet
 
-<img src="example/assets/example/default_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/default_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 A powerful and flexible **responsive bottom sheet** for Flutter that adapts automatically between **modal**, **side sheet**, and **dialog** modes — depending on the screen size.
 
@@ -73,7 +73,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/default_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/default_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### 🪟 Side Sheet Only
 
@@ -87,7 +87,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/side_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/side_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### 🖼️ Dialog Only
 
@@ -104,7 +104,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/dialog_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/dialog_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### ⚙️ Fixed Size
 
@@ -121,7 +121,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/fix_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/fix_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### ⚙️ Fixed Ratio Size
 
@@ -155,7 +155,7 @@ showResponsiveBottomSheet(
   ),
 );
 ```
-<img src="example/assets/example/ratio_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/ratio_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### ⚙️ Custom Style
 
@@ -184,7 +184,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/custom_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/custom_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 
 ### 🔁 With Result
@@ -203,7 +203,7 @@ if (context.mounted && result != null) {
 }
 ```
 
-<img src="example/assets/example/result_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/result_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### 🧩 Nested Sheets
 
@@ -214,7 +214,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/nested_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/nested_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### ♻️ Preserve State Automatically
 
@@ -225,7 +225,7 @@ showResponsiveBottomSheet(
 );
 ```
 
-<img src="example/assets/example/auto_preserve_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/auto_preserve_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ---
 
