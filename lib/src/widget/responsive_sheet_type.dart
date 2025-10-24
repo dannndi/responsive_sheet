@@ -1,0 +1,1 @@
+enum ResponsiveSheetType { side, dialog, sheet }
