@@ -1,7 +1,10 @@
 name: responsive_sheet
 description: "Responsive Sheet for Desktop, Tablet and Mobile"
 version: 1.0.0
-homepage:
+homepage: https://github.com/dannndi/responsive_sheet
+repository: https://github.com/dannndi/responsive_sheet
+license: MIT
+publish_to: "https://pub.dev"
 
 environment:
   sdk: ^3.8.1
