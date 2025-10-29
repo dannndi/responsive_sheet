@@ -1,6 +1,6 @@
 name: responsive_sheet
 description: "Responsive Sheet for Flutter apps that adapts seamlessly to Desktop, Tablet, and Mobile, providing a flexible and customizable modal experience."
-version: 1.0.4
+version: 1.1.0
 homepage: https://github.com/dannndi/responsive_sheet
 repository: https://github.com/dannndi/responsive_sheet
 license: MIT

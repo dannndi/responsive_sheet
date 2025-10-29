@@ -16,3 +16,6 @@
 
 ## 1.0.4
 - ⚙️ Update README, add live example and video explanation
+
+## 1.1.0
+- 🧩 [Update] Provides type in builder, so u can customize widget for each type
