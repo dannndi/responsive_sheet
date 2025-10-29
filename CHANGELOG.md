@@ -13,3 +13,6 @@
 
 ## 1.0.3
 - ⚙️ Adjust Pub Point Suggestion
+
+## 1.0.4
+- ⚙️ Update README, add live example and video explanation
