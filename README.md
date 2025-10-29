@@ -6,6 +6,11 @@ A powerful and flexible **responsive bottom sheet** for Flutter that adapts auto
 
 It’s designed for apps that need a seamless experience across **mobile**, **tablet**, and **desktop** platforms.
 
+You can check Live Web Example in here [[Live Example]](https://responsivesheetexample.vercel.app/)
+
+You can also check how to use it on youtube video [[Video Explanation]](https://www.youtube.com/watch?v=x19SKDvIgZo)
+
+
 ---
 
 ## 🚀 Features
@@ -25,7 +30,7 @@ Add dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  responsive_sheet: ^1.0.0
+  responsive_sheet: ^latest
 ```
 
 Then run:
