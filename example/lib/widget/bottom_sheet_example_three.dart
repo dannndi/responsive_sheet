@@ -32,7 +32,7 @@ class _BottomSheetExampleThreeState extends State<BottomSheetExampleThree> {
               showResponsiveBottomSheet(
                 context,
                 typeBuilder: (_) => ResponsiveSheetType.side,
-                builder: (context) => SizedBox(
+                builder: (context, type) => SizedBox(
                   width: 670,
                   child: BottomSheetExampleOne(
                     title: "Show Responsive BottomSheet Side Only",

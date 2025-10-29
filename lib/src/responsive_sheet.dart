@@ -41,7 +41,7 @@ import 'package:responsive_sheet/src/widget/responsive_sheet_utils.dart';
 /// A [Future] that completes when the sheet is dismissed, with an optional result.
 Future<T?> showResponsiveBottomSheet<T>(
   BuildContext context, {
-  required Widget Function(BuildContext context) builder,
+  required ResponsiveSheetBuilder builder,
   ResponsiveSheetTypeBuilder? typeBuilder,
   bool barrierDismissible = true,
   Color barrierColor = Colors.black54,

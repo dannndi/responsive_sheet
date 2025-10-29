@@ -2,6 +2,12 @@ import 'package:flutter/widgets.dart';
 import 'package:responsive_sheet/src/widget/responsive_sheet_type.dart';
 import 'package:responsive_sheet/src/widget/responsive_sheet_style.dart';
 
+typedef ResponsiveSheetBuilder =
+    Widget Function(
+      BuildContext context,
+      ResponsiveSheetType type,
+    );
+
 typedef ResponsiveSheetTypeBuilder =
     ResponsiveSheetType Function(BuildContext context);
 

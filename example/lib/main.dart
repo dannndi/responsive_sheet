@@ -1,3 +1,4 @@
+import 'package:example_responsive_sheet/widget/bottom_sheet_example_four.dart';
 import 'package:example_responsive_sheet/widget/bottom_sheet_example_one.dart';
 import 'package:example_responsive_sheet/widget/bottom_sheet_example_three.dart';
 import 'package:example_responsive_sheet/widget/bottom_sheet_example_two.dart';
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 showResponsiveBottomSheet(
                   context,
-                  builder: (context) => BottomSheetExampleOne(
+                  builder: (context, type) => BottomSheetExampleOne(
                     title: "Show Default Responsive BottomSheet",
                   ),
                 );
@@ -52,7 +53,7 @@ class HomePage extends StatelessWidget {
                 showResponsiveBottomSheet(
                   context,
                   typeBuilder: (_) => ResponsiveSheetType.side,
-                  builder: (context) => BottomSheetExampleOne(
+                  builder: (context, type) => BottomSheetExampleOne(
                     title: "Show Responsive BottomSheet Side Only",
                   ),
                 );
@@ -64,7 +65,7 @@ class HomePage extends StatelessWidget {
                 showResponsiveBottomSheet(
                   context,
                   typeBuilder: (_) => ResponsiveSheetType.dialog,
-                  builder: (context) => SizedBox(
+                  builder: (context, type) => SizedBox(
                     width: 670,
                     child: BottomSheetExampleOne(
                       title: "Show Responsive BottomSheet Dialog Only",
@@ -79,7 +80,7 @@ class HomePage extends StatelessWidget {
                 showResponsiveBottomSheet(
                   context,
                   typeBuilder: (_) => ResponsiveSheetType.side,
-                  builder: (context) => SizedBox(
+                  builder: (context, type) => SizedBox(
                     width: 300,
                     child: BottomSheetExampleOne(
                       title: "Show Responsive BottomSheet Side with Fixed Size",
@@ -94,7 +95,7 @@ class HomePage extends StatelessWidget {
                 showResponsiveBottomSheet(
                   context,
                   typeBuilder: (_) => ResponsiveSheetType.side,
-                  builder: (context) => SizedBox(
+                  builder: (context, type) => SizedBox(
                     width: context.responsiveValues(
                       desktop: MediaQuery.sizeOf(context).width * 0.4,
                       tablet: MediaQuery.sizeOf(context).width * 0.6,
@@ -128,7 +129,7 @@ class HomePage extends StatelessWidget {
                       ),
                     );
                   },
-                  builder: (context) => BottomSheetExampleOne(
+                  builder: (context, type) => BottomSheetExampleOne(
                     title: "Show Responsive BottomSheet with Custom Style",
                   ),
                 );
@@ -155,7 +156,7 @@ class HomePage extends StatelessWidget {
                       ),
                     );
                   },
-                  builder: (context) =>
+                  builder: (context, type) =>
                       BottomSheetExampleOne(title: "Pick A Color"),
                 );
 
@@ -173,7 +174,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 showResponsiveBottomSheet(
                   context,
-                  builder: (context) => BottomSheetExampleThree(),
+                  builder: (context, type) => BottomSheetExampleThree(),
                 );
               },
             ),
@@ -184,7 +185,21 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 showResponsiveBottomSheet(
                   context,
-                  builder: (context) => BottomSheetExampleTwo(),
+                  builder: (context, type) => BottomSheetExampleTwo(),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: Text(
+                "Show Responsive BottomSheet with Custom Widget",
+              ),
+              onPressed: () {
+                showResponsiveBottomSheet(
+                  context,
+                  builder: (context, type) => BottomSheetExampleFour(
+                    title: "Show Responsive BottomSheet with Custom Widget",
+                    type: type,
+                  ),
                 );
               },
             ),

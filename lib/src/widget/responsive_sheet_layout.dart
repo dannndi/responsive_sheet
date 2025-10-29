@@ -25,7 +25,7 @@ class ResponsiveSheetLayout extends StatefulWidget {
   final ResponsiveSheetTypeBuilder? typeBuilder;
 
   /// The widget content to be displayed inside the sheet.
-  final Widget Function(BuildContext) builder;
+  final ResponsiveSheetBuilder builder;
 
   /// Optional animation controller used only when displaying
   /// a bottom sheet (slide-up animation).
@@ -49,16 +49,19 @@ class _ResponsiveSheetLayoutState extends State<ResponsiveSheetLayout> {
 
   @override
   Widget build(BuildContext context) {
-    // The actual child widget built from the user's builder callback.
-    final content = Material(key: contentKey, child: widget.builder(context));
-
-    // Screen size used for responsive constraints.
-    final size = MediaQuery.sizeOf(context);
-
     // Determine which layout type should be used.
     final type =
         widget.typeBuilder?.call(context) ??
         ResponsiveSheetUtils.defaultType(context);
+
+    // The actual child widget built from the user's builder callback.
+    final content = Material(
+      key: contentKey,
+      child: widget.builder(context, type),
+    );
+
+    // Screen size used for responsive constraints.
+    final size = MediaQuery.sizeOf(context);
 
     switch (type) {
       // ───────────────────────── SIDE SHEET ─────────────────────────

@@ -13,7 +13,7 @@ class ResponsiveSheetRoute<T> extends PopupRoute<T> {
   });
 
   /// The builder function that provides the content widget for the sheet.
-  final Widget Function(BuildContext context) builder;
+  final ResponsiveSheetBuilder builder;
 
   /// Determines which layout type (sheet, dialog, or side sheet) to render.
   /// If null, defaults to [ResponsiveSheetUtils.defaultType].
