@@ -10,7 +10,6 @@ You can check Live Web Example in here [[Live Example]](https://responsivesheete
 
 You can also check how to use it on youtube video [[Video Explanation]](https://www.youtube.com/watch?v=x19SKDvIgZo)
 
-
 ---
 
 ## 🚀 Features
@@ -50,7 +49,7 @@ import 'package:responsive_sheet/responsive_sheet.dart';
 Future<void> showMySheet(BuildContext context) async {
   final result = await showResponsiveBottomSheet(
     context,
-    builder: (context) => const MySheetContent(),
+    builder: (context, type) => const MySheetContent(),
   );
 
   if (context.mounted && result != null) {
@@ -72,7 +71,7 @@ Below are several use cases showing how `ResponsiveSheet` adapts automatically d
 ```dart
 showResponsiveBottomSheet(
   context,
-  builder: (context) => BottomSheetExampleOne(
+  builder: (context, type) => BottomSheetExampleOne(
     title: "Show Default Responsive BottomSheet",
   ),
 );
@@ -86,7 +85,7 @@ showResponsiveBottomSheet(
 showResponsiveBottomSheet(
   context,
   typeBuilder: (_) => ResponsiveSheetType.side,
-  builder: (context) => BottomSheetExampleOne(
+  builder: (context, type) => BottomSheetExampleOne(
     title: "Show Responsive BottomSheet Side Only",
   ),
 );
@@ -100,7 +99,7 @@ showResponsiveBottomSheet(
 showResponsiveBottomSheet(
   context,
   typeBuilder: (_) => ResponsiveSheetType.dialog,
-  builder: (context) => SizedBox(
+  builder: (context, type) => SizedBox(
     width: 670,
     child: BottomSheetExampleOne(
       title: "Show Responsive BottomSheet Dialog Only",
@@ -117,7 +116,7 @@ showResponsiveBottomSheet(
 showResponsiveBottomSheet(
   context,
   typeBuilder: (_) => ResponsiveSheetType.side,
-  builder: (context) => SizedBox(
+  builder: (context, type) => SizedBox(
     width: 300,
     child: BottomSheetExampleOne(
       title: "Show Responsive BottomSheet Side with Fixed Size",
@@ -134,7 +133,7 @@ showResponsiveBottomSheet(
 showResponsiveBottomSheet(
   context,
   typeBuilder: (_) => ResponsiveSheetType.side,
-  builder: (context) => SizedBox(
+  builder: (context, type) => SizedBox(
     width: MediaQuery.sizeOf(context).width * 0.4,
     child: BottomSheetExampleOne(
       title: "Show Responsive BottomSheet Side with Ratio Size",
@@ -142,13 +141,14 @@ showResponsiveBottomSheet(
   ),
 );
 ```
+
 you can also make size responsive to media query like this
 
 ```dart
 showResponsiveBottomSheet(
   context,
   typeBuilder: (_) => ResponsiveSheetType.side,
-  builder: (context) => SizedBox(
+  builder: (context, type) => SizedBox(
     width: context.responsiveValues(
       desktop: MediaQuery.sizeOf(context).width * 0.4,
       tablet: MediaQuery.sizeOf(context).width * 0.6,
@@ -160,6 +160,7 @@ showResponsiveBottomSheet(
   ),
 );
 ```
+
 <img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/ratio_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
 ### ⚙️ Custom Style
@@ -183,7 +184,7 @@ showResponsiveBottomSheet(
       ),
     );
   },
-  builder: (context) => BottomSheetExampleOne(
+  builder: (context, type) => BottomSheetExampleOne(
     title: "Show Responsive BottomSheet with Custom Style",
   ),
 );
@@ -191,13 +192,12 @@ showResponsiveBottomSheet(
 
 <img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/custom_responsive_sheet.gif" width="720" alt="Responsive Sheet Example">
 
-
 ### 🔁 With Result
 
 ```dart
 final result = await showResponsiveBottomSheet(
   context,
-  builder: (context) => BottomSheetExampleOne(
+  builder: (context, type) => BottomSheetExampleOne(
     title: "Pick a color",
   ),
 );
@@ -215,7 +215,7 @@ if (context.mounted && result != null) {
 ```dart
 showResponsiveBottomSheet(
   context,
-  builder: (context) => BottomSheetExampleThree(),
+  builder: (context, type) => BottomSheetExampleThree(),
 );
 ```
 
@@ -226,7 +226,7 @@ showResponsiveBottomSheet(
 ```dart
 showResponsiveBottomSheet(
   context,
-  builder: (context) => BottomSheetExampleTwo(),
+  builder: (context, type) => BottomSheetExampleTwo(),
 );
 ```
 
@@ -234,12 +234,29 @@ showResponsiveBottomSheet(
 
 ---
 
+### ♻️ Customize Widget for Each Type
+
+```dart
+showResponsiveBottomSheet(
+  context,
+  builder: (context, type) => BottomSheetExampleFour(
+    title: "Show Responsive BottomSheet with Custom Widget",
+    type: type,
+  ),
+);
+```
+
+<img src="https://raw.githubusercontent.com/dannndi/responsive_sheet/main/example/assets/example/custom_type_widget.gif" width="720" alt="Responsive Sheet Example">
+
+---
+
 ## 🧠 Responsive Logic
 
 Internally, `ResponsiveSheet` will choose sheet type automatically:
-- **Mobile:** Bottom sheet  
-- **Tablet:** Side sheet  
-- **Desktop:** Dialog  
+
+- **Mobile:** Bottom sheet
+- **Tablet:** Side sheet
+- **Desktop:** Dialog
 
 You can override this by providing a custom `typeBuilder`.
 
@@ -250,18 +267,7 @@ You can override this by providing a custom `typeBuilder`.
 The `styleBuilder` parameter allows you to define **custom visual styles** for each sheet type (`side`, `dialog`, or `sheet`).  
 You can adjust the **margin**, **border radius**, and **elevation** dynamically.
 
-Using the `BuildContext`, you can even manage **different styles per screen size** for more refined responsiveness.
-
----
-
-## 🧰 Advanced Parameters
-
-| Parameter | Type | Description |
-|------------|------|-------------|
-| `builder` | `Widget Function(BuildContext)` | Content builder for your sheet |
-| `typeBuilder` | `ResponsiveSheetType Function(BuildContext)?` | Force a specific sheet type |
-| `styleBuilder` | `ResponsiveSheetStyle Function(BuildContext, ResponsiveSheetType)?` | Customize margin, radius, color |
-| `animationController` | `AnimationController?` | Provide custom animation controller |
+Using the `builder`, you can even manage **different styles per type / screen size** for more refined responsiveness.
 
 ---
 
